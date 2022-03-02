@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>FORM VALIDATION</title>
+<script type="text/javascript">
+function validate()
+{
+	console.log('val',document.myform.zip.value)
+	if(document.myform.Name.value=="")
+	{
+	alert("Please provide your name!");
+	document.myform.Name.focus()
+	return false;
+	}
+	else if(document.myform.Email.value=="")
+	{
+	alert("Please provide your Email!")
+	document.myform.Email.focus()
+	return false;
+	}
+	else if(document.myform.zip.value==""||document.myform.zip.value.length!=6)
+	{
+	alert("Please provide your zip!");
+	document.myform.zip.focus()
+	return false;
+	}
+	else if(document.myform.country.value=="-1")
+	{
+	alert("Please provide your country!");
+	return false;
+	}
+else
+	{
+	return true;
+	}
+}
+</script>
+</head>
+<body align="center">
+<form name="myform" onsubmit="return validate()">
+<br><br>
+<label>Name</label>
+<input type="text" size="15" name="Name">
+<br><br>
+<label>Email</label>
+<input type="text" size="15" name="Email">
+<br><br><label>ZipCode</label>
+<input type="text" id="zip" size="15" name="zip">
+<br><br>
+<label>Country</label>
+<select name="country">
+<option value="-1">Country</option>
+<option value="1">USA</option>
+<option value="2">INDIA</option>
+</select>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
