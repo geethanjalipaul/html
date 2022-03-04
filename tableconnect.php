@@ -13,7 +13,7 @@
   <button name="btn4" type="submit">View</button>
 </form>
 <?php
-$con = Mysqli_Connect("localhost","root", "" ,"aiswarya" );
+$con = Mysqli_Connect("localhost","root", "" ,"geethanjali" );
 if(isset($_POST['btn1']))
 {
 $roll=$_POST['roll'];
